@@ -2,6 +2,10 @@
 /*
 全体
 ****/
+html {
+  height: 100%;
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -50,10 +54,24 @@
   color: #fff;
 }
 
+.btn-reverse {
+  background-color: #fff;
+  color: #1af;
+  border: 1px solid #1af;
+}
+
+.btn-reverse:hover {
+  color: #1af;
+}
+
 a {
   font-size: 13px;
   color: #1af;
   text-decoration: none;
+}
+
+.text-sm {
+  font-size: 0.7rem;
 }
 
 /*
@@ -318,7 +336,7 @@ body .signup {
 }
 
 /*
-プロフィール
+ユーザー
 ****/
 .profile .profile-area {
   padding: 25px;

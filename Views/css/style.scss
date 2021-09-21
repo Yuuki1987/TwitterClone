@@ -1,6 +1,10 @@
 /*
 全体
 ****/
+html {
+    height: 100%;
+}
+ 
 .container {
     display: flex;
     justify-content: center;
@@ -47,10 +51,24 @@
     color: #fff;
 }
  
+.btn-reverse {
+    background-color: #fff;
+    color: #1af;
+    border: 1px solid #1af;
+}
+ 
+.btn-reverse:hover {
+    color: #1af;
+}
+ 
 a {
-    font-size:13px;
-    color:#1af;
+    font-size: 13px;
+    color: #1af;
     text-decoration: none;
+}
+ 
+.text-sm {
+    font-size: 0.7rem;
 }
  
 /*
@@ -253,7 +271,7 @@ a {
         margin-top: 10px;
     }
 }
-
+ 
 /*
 会員登録（ログイン画面共用）
 ****/
@@ -299,9 +317,9 @@ body .signup {
     border-color: #1af;
     color: #fff;
 }
-
+ 
 /*
-プロフィール
+ユーザー
 ****/
 .profile .profile-area {
     padding: 25px;
@@ -350,7 +368,7 @@ body .signup {
     margin-right: 30px;
     color: #778;
 }
-
+ 
 /*
 検索
 ****/
@@ -364,6 +382,7 @@ body .signup {
     max-width: 300px;
     margin-right: 10px;
 }
+ 
 /*
 通知
 ****/

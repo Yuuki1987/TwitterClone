@@ -1,13 +1,3 @@
-<?php
-
-//関連する設定を読み込む
-include_once('../config.php');
-
-//役立つ関数の読み込み
-include_once('../util.php');
-
-?>
-
 <!DOCTYPE html>
 <html lang="ja">
      <!-- headの読み込み -->

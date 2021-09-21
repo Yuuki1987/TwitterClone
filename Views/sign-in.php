@@ -23,6 +23,13 @@ include_once('../util.php');
         <form action="sign-in.php" method="post">
             <img src="../Views/img/logo-white.svg" alt="" class="logo-white">
             <h1>Twitter Cloneにログイン</h1>
+
+            <?php if (isset($view_try_login_result) && $view_try_login_result === false) : ?>
+                <div class="alert alert-warning text-sm" role="alert">
+                    ログインに失敗しました。<br>メールアドレス、パスワードが正しいかご確認ください。
+                </div>
+            <?php endif; ?>
+
             <input type="email" class="form-control" name="email" placeholder="メールアドレス" required autofocus>
             <input type="password" class="form-control" name="password" placeholder="パスワード" required>
             <button class="w-100 btn btn-lg" type="submit">LOGIN</button>
