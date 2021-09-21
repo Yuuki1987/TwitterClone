@@ -48,6 +48,9 @@ function createUser(array $data)
     return $response;
 }
 
+
+
+
 function findUserAndCheckPassword(string $email, string $password)
 {
     // DB接続

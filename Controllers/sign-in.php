@@ -19,7 +19,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
  
     // ログインに成功した場合
     if ($user) {
-        // ユーザー情報をセッションに保存【Models/users.phpに処理を依頼】
+        // ユーザー情報をセッションに保存【util.phpに処理を依頼】
         saveUserSession($user);
  
         // ホーム画面へ遷移
