@@ -1,16 +1,18 @@
 <?php
 ///////////////////////////////////////
-// サインインコントローラー(ログイン)
+// ホームコントローラー
 ///////////////////////////////////////
+ 
 // 設定を読み込み
 include_once '../config.php';
-// 便利な関数を読み込む
+// 便利な関数を読み込み
 include_once '../util.php';
-// ユーザーデータ処理するModelの読み込み
-include_once '../Models/users.php';
-//ツイートを読み込み等を行うModelsの読み込み
+ 
+// ツイートデータ操作モデルを読み込む
 include_once '../Models/tweets.php';
-
+// フォローデータ操作モデルを読み込む
+include_once '../Models/follows.php';
+ 
 // ログインチェック
 $user = getUserSession();
 if (!$user) {
@@ -18,13 +20,16 @@ if (!$user) {
     header('Location: ' . HOME_URL . 'Controllers/sign-in.php');
     exit;
 }
-
-// Viewで使用する変数に置き換える（独自ルール）
+ 
+// 自分がフォローしているユーザーID一覧を取得
+$following_user_ids = findFollowingUserIds($user['id']);
+// 自分のツイートも表示するために自分のIDも追加
+$following_user_ids[] = $user['id'];
+ 
+// 表示用の変数
 $view_user = $user;
 // ツイート一覧
-$view_tweets = findTweets($user);
-
-
-
+$view_tweets = findTweets($user, null, $following_user_ids);
+ 
 // 画面表示
 include_once '../Views/home.php';
