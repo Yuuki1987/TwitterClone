@@ -7,8 +7,6 @@ include_once('../config.php');
 include_once('../util.php');
 
 
-
-
 ?>
 
 <!DOCTYPE html>
