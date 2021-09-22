@@ -1,39 +1,3 @@
-<?php
-//関連する設定を読み込む
-include_once('../config.php');
-
-//役立つ関数の読み込み
-include_once('../util.php');
- 
-///////////////////////////////////////
-// ツイート一覧
-///////////////////////////////////////
-$view_tweets = [
-    [
-        'user_id' => 1,
-        'user_name' => 'Jack_D',
-        'user_nickname' => 'ジャックドーシー',
-        'user_image_name' => 'jackdorcey_01.jpg',
-        'tweet_body' => 'アメリカ合衆国カリフォルニア州サンフランシスコにてTwitter創業。',
-        'tweet_image_name' => null,
-        'tweet_created_at' => '2006-03-21 14:00:00',
-        'like_id' => null,
-        'like_count' => 0,
-    ],
-    [
-        'user_id' => 2,
-        'user_name' => 'Diablo20210924',
-        'user_nickname' => 'ディアブロ２RD公式',
-        'user_image_name' => null,
-        'tweet_body' => 'ディアブロ２リザレクテッドが９月２４日発売！！',
-        'tweet_image_name' => 'db2rd.gif',
-        'tweet_created_at' => '2021-08-14 14:00:00',
-        'like_id' => 1,
-        'like_count' => 1,
-    ]
-];
- 
-?>
 <!DOCTYPE html>
 <html lang="ja">
  
